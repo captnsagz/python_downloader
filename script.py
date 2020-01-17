@@ -4,7 +4,7 @@ import requests
 import platform
 
 
-if "linux" in platform.uname():
+if "Linux" in platform.uname():
         subprocess.call("clear",shell=True)
 else:
         subprocess.call("cls",shell=True)
