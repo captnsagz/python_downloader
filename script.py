@@ -3,12 +3,13 @@ import subprocess
 import requests
 import platform
 
-
-if "Linux" in platform.uname():
-        subprocess.call("clear",shell=True)
-else:
-        subprocess.call("cls",shell=True)
-
+try:
+        if "Linux" in platform.uname():
+                subprocess.call("clear",shell=True)
+        else:
+                subprocess.call("cls",shell=True)
+except module.error:
+        print("Error while cleaning screen!!")
 if len(sys.argv) < 3:
         print("[!]Usage: python <filename.py> <'url'> <'name of file to save as'>")
         sys.exit(1)
